@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Blue/Green Deployment Demo</title>
+    <link href="../resources/css/bootstrap.min.css" rel="stylesheet" media="screen"/>    
+    <style type="text/css">
+    body {      
+      color: white;
+      text-align: center;
+      vertical-align: center;
+    }
+
+    body.blue {
+      background-color: rgba(55,14,218,0.9);  
+    }
+
+    body.green {
+      background-color: #378D86;  
+    }
+    </style>
+  </head>
+  <body th:class="${session.color}">
+    <img th:src="${(session.color != null AND session.color != 'green' ? 'img/kcap_blue.png' : 'img/img_green.jpg')}"/>
+    
+  </body>
+</html>

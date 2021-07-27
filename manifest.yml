@@ -1,0 +1,6 @@
+applications:
+- name: rabbitStreams
+  path:  target/rabbitStreams-0.0.1-SNAPSHOT.jar
+  instances: 1
+  services: [ app1-rabbit ]
+  timeout: 180
